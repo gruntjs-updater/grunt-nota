@@ -1,0 +1,44 @@
+{
+  "name": "grunt-nota",
+  "description": "Use grunt to excrete pretty documents",
+  "version": "0.1.0",
+  "homepage": "https://github.com/inventid/grunt-nota",
+  "author": {
+    "name": "Joost Verdoorn",
+    "email": "joost@inventid.nl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:inventid/grunt-nota.git"
+  },
+  "bugs": {
+    "url": "https://github.com/inventid/grunt-nota/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/inventid/grunt-nota/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "nota": "FelixAkk/nota#seperate-cli"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
