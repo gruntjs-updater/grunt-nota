@@ -27,7 +27,8 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "nota": "FelixAkk/nota#seperate-cli"
+    "nota": "FelixAkk/nota#seperate-cli",
+    "open": "~0.0.5"
   },
   "devDependencies": {
     "grunt-contrib-clean": "^0.5.0",

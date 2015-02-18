@@ -12,10 +12,6 @@ module.exports = ( grunt ) ->
           ext: '.js'
         ]
 
-    nota:
-      default:
-        test: 'hallo'
-
     watch:
       all:
         files: ['src/**/*.coffee']
@@ -23,4 +19,4 @@ module.exports = ( grunt ) ->
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadTasks 'tasks'
+

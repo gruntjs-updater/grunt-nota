@@ -1,4 +1,6 @@
+fs = require('fs')
 Nota = require('Nota')
+open = require('open')
 
 module.exports = ( grunt ) ->
 
@@ -8,6 +10,7 @@ module.exports = ( grunt ) ->
     outputPath    = grunt.option('output')   or @data.output  or 'output.pdf'
     serverAddress = grunt.option('address')  or @data.address or 'localhost'
     serverPort    = grunt.option('port')     or @data.port    or 7483
+    preview       = grunt.option('preview')  or @data.preview or false
 
     grunt.log.writeln("=== Nota ===")
     grunt.log.writeln("templatePath:  #{templatePath}")
@@ -17,6 +20,14 @@ module.exports = ( grunt ) ->
     grunt.log.writeln("serverPort:    #{serverPort}")
 
     done = @async()
-    nota = new Nota(templatePath, dataPath, outputPath, serverAddress, serverPort, done)
-    grunt.log.writeln("Rendering!")
+    fs.readFile dataPath, ( err, contents ) ->
+      data = JSON.parse(contents)
+      console.log(data)
+
+      grunt.log.writeln("Starting Nota.")
+      nota = new Nota(serverAddress, serverPort, templatePath, data)
+
+      grunt.log.writeln("Rendering.")
+      if preview then open(nota.url())
+      else nota.render(outputPath, done)
 
