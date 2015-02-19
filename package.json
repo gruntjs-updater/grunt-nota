@@ -27,7 +27,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "nota": "FelixAkk/nota#seperate-cli",
+    "nota": "inventid/nota#seperate-cli",
     "open": "~0.0.5"
   },
   "devDependencies": {
