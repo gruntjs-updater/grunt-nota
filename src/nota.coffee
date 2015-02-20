@@ -25,7 +25,7 @@ module.exports = ( grunt ) ->
       console.log(data)
 
       grunt.log.writeln("Starting Nota.")
-      nota = new Nota(serverAddress, serverPort, templatePath, data)
+      nota = new Nota(serverAddress, serverPort, templatePath, dataPath)
 
       grunt.log.writeln("Rendering.")
       if preview then open(nota.url())
